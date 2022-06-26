@@ -58,7 +58,6 @@ class HomePageComponent extends React.Component<PropsType /*, State*/> {
     async componentDidMount() {
       this.props.fetchStart();
       try{
-        console.log("发命令"); 
         const { data } = await axios.get("/api/Productlistb"/*"http://192.168.0.1:8080/api/productCollections"*/)
         console.log(data); 
         this.props.fetchSuccess(data);
@@ -113,21 +112,21 @@ class HomePageComponent extends React.Component<PropsType /*, State*/> {
             {t("home_page.hot_recommended") as any}
           </Typography.Title>}
           sideImage={sideImage}
-          products={productList[0].touristRoutes}
+          products={productList}
          />
          <ProductCollection 
           title={<Typography.Title level={3} type="danger">
              {t("home_page.new_arrival") as any}
           </Typography.Title>}
           sideImage={sideImage2}
-          products={productList[1].touristRoutes}
+          products={productList}
          />
          <ProductCollection 
           title={<Typography.Title level={3} type="success">
             {t("home_page.domestic_travel") as any}
           </Typography.Title>}
           sideImage={sideImage3}
-          products={productList[2].touristRoutes}
+          products={productList}
          />
           <BusinessPartners />
       </div>
