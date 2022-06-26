@@ -1,5 +1,5 @@
 {
-    "ProductList1": {
+    "Productlist1": {
         "id": {
             "int": {
                 "min": 0,
@@ -22,7 +22,7 @@
             "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
         }
     },
-    "ProductList2": {
+    "Productlist2": {
         "id": {
             "int": {
                 "min": 0,
@@ -45,7 +45,7 @@
             "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
         }
     },
-    "PoductList3": {
+    "Poductlist3": {
         "id": {
             "int": {
                 "min": 0,
