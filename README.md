@@ -141,3 +141,13 @@ npm i axios 自带TS类型定义
 * thunk action中可以完成一系列连续action操作
 * 并且可以处理异步函数
 * 业务逻辑可以从UI层面挪到这里，代码分成更清晰
+
+# 中间件原理
+## 函数式编程
+* 复合函数f(g(x)) redux中间件理论基础
+* 柯里化 柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数
+* redux核心 管理所有数据输入输出
+* 一个需求记录每次dispatch的action信息
+* 提供分类处理action机会 可以自由组合中间件
+* redux-promise、redux-saga 异步处理中间件
+* Redux中间件公式 const middleware = (store) => (next) => (action) => {}
