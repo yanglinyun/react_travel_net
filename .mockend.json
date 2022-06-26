@@ -1,5 +1,4 @@
 {
-  "productCollections": {
     "productList1": {
       "id": { "int": { "min": 0, "max": 10000 } },
       "title": { "string": {} },
@@ -36,5 +35,4 @@
         }
       ]
     }
-  }
 }
