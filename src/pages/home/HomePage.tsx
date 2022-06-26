@@ -58,7 +58,7 @@ class HomePageComponent extends React.Component<PropsType /*, State*/> {
     async componentDidMount() {
       this.props.fetchStart();
       try{
-        const { data } = await axios.get("https://mockend.com/org/repo/users"/*"http://192.168.0.1:8080/api/productCollections"*/)
+        const { data } = await axios.get("https://mockend.com/yanglinyun/react_travel_net/productCollections"/*"http://192.168.0.1:8080/api/productCollections"*/)
         console.log(data); 
         this.props.fetchSuccess(data);
         // this.setState({
