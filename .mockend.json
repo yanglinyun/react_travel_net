@@ -6,13 +6,11 @@
         "摩洛哥撒哈拉沙漠+卡萨布兰卡+马拉喀什+舍夫沙..."
       ] },
       "price": { "int": { "min": 0, "max": 10000 } },
-      "touristRoutePictures": [
-        {
-          "url": {
-            "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
-          }
+      "touristRoutePictures": {
+        "url": {
+          "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
         }
-      ]
+      }
     },
     "productList2": {
       "id": { "int": { "min": 0, "max": 10000 } },
