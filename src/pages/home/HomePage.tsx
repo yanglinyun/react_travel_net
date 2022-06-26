@@ -11,7 +11,7 @@ import { t } from 'i18next';
 import axios from 'axios';
 import { connect } from "react-redux";
 import { RootState } from "../../redux/store"
-import { fetchRecommendProductStartAction, fetchRecommendProductFailAction, fetchRecommendProductSucessAction} from "../../redux/recommendProducts/recommendProductsActions"
+import { giveMeDataActionCreator } from "../../redux/recommendProducts/recommendProductsActions"
 // 首字母小写为HOC 大写为类型定义
 
 // interface State {
@@ -31,14 +31,8 @@ const mapStateToProps = (state: RootState) => {
 
 const  mapDispatchToProps = (dispatch) => {
   return {
-    fetchStart: ()=>{
-      dispatch(fetchRecommendProductStartAction());
-    },
-    fetchSuccess: (data)=>{
-      dispatch(fetchRecommendProductSucessAction(data));
-    },
-    fetchFail: (error)=>{
-      dispatch(fetchRecommendProductFailAction(error))
+    giveMeData: ()=>{
+      dispatch(giveMeDataActionCreator());
     }
   }
 }
@@ -55,24 +49,8 @@ class HomePageComponent extends React.Component<PropsType /*, State*/> {
     //   }
     // }
 
-    async componentDidMount() {
-      this.props.fetchStart();
-      try{
-        const { data } = await axios.get("/api/Productlistb"/*"http://192.168.0.1:8080/api/productCollections"*/)
-        console.log(data); 
-        this.props.fetchSuccess(data);
-        // this.setState({
-        //   loading: false,
-        //   error: null,
-        //   productList: data
-        // })
-      }catch(e:any){
-        this.props.fetchFail(e);
-        // this.setState({
-        //   error: e.message,
-        //   loading: false
-        // })
-      }
+    componentDidMount() {
+      this.props.giveMeData();
     }
 
     render() {
