@@ -10,6 +10,7 @@ import { Provider  } from 'react-redux';
 import axios from "axios";
 
 axios.defaults.headers['x-icode'] = 'xxxxxxxx';
+axios.defaults.headers['Access-Control-Allow-Origin'] = 'https://mockend.com';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
