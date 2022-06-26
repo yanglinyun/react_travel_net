@@ -1,5 +1,40 @@
 {
-    "User": {
-      "title": { "string": {} }
+  "productCollections": {
+    "productList1": {
+      "id": { "int": { "min": 0, "max": 10000 } },
+      "title": { "string": {} },
+      "price": { "int": { "min": 0, "max": 10000 } },
+      "touristRoutePictures": [
+        {
+          "url": {
+            "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
+          }
+        }
+      ]
+    },
+    "productList2": {
+      "id": { "int": { "min": 0, "max": 10000 } },
+      "title": { "string": {} },
+      "price": { "int": { "min": 0, "max": 10000 } },
+      "touristRoutePictures": [
+        {
+          "url": {
+            "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
+          }
+        }
+      ]
+    },
+    "productList.3": {
+      "id": { "int": { "min": 0, "max": 10000 } },
+      "title": { "string": {} },
+      "price": { "int": { "min": 0, "max": 10000 } },
+      "touristRoutePictures": [
+        {
+          "url": {
+            "regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
+          }
+        }
+      ]
     }
   }
+}
