@@ -150,4 +150,12 @@ npm i axios 自带TS类型定义
 * 一个需求记录每次dispatch的action信息
 * 提供分类处理action机会 可以自由组合中间件
 * redux-promise、redux-saga 异步处理中间件
-* Redux中间件公式 const middleware = (store) => (next) => (action) => {}
+* Redux中间件公式 const middleware = (store) => (next) => (action) => {} 分别传递store next action 参数 柯里化典型代表
+* 中间件调用逻辑 middleware(store)(next)(action)
+
+# restful api 成熟度
+* 0级 有api + http传输 如：soap
+* 1级 面向资源而不是过程
+* 2级 1级别HTTP动词 GET、POST创建、PUT、PATCH、DELETE
+* 3级 超媒体控制 加入api自我发现机制 返回资源api会带有curd该资源所有方法的连接 不需要将api请求写入文档
+案例 github 豆瓣
